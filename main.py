@@ -1,4 +1,5 @@
 import math
+import random
 from tkinter import *
 root = Tk()
 myCanvas = Canvas(root)
@@ -11,7 +12,9 @@ def create_circle(x, y, r, canvasName): #center coordinates, radius
     y0 = y - r
     x1 = x + r
     y1 = y + r
-    return canvasName.create_oval(x0, y0, x1, y1)
+    Colors = ["red", "blue", "yellow"]
+    randColor = random.choice(Colors)
+    return canvasName.create_oval(x0, y0, x1, y1, outline=randColor, fill=randColor)
 
 
 
@@ -22,8 +25,8 @@ corna = 7
 cornb = 3
 side = 20
 
-for i in range(1024):
-    for j in range(576):
+for i in range(300):
+    for j in range(300):
         x = corna + i * side/100
         y = cornb + j * side/100
         c = math.floor(x * x + y * y)
