@@ -25,8 +25,8 @@ corna = 7
 cornb = 3
 side = 20
 
-for i in range(250):
-    for j in range(250):
+for i in range(1000):
+    for j in range(1000):
         x = corna + i * side/100
         y = cornb + j * side/100
         c = math.floor(x * x + y * y)
